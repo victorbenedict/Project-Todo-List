@@ -5,7 +5,10 @@ module.exports = {
   mode: 'development',
   entry: { 
     index: './src/index.js',
+    controller: './src/controller.js',
     logic: './src/logic.js',
+    display: './src/display.js',
+    storage: './src/storage.js',
   },
   devtool: 'inline-source-map',
   plugins: [
