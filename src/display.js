@@ -1,9 +1,10 @@
 //This module is responsible for DOM manipulation and updating the HTML structure to reflect changes in the running data.
 
-function consoleProject(name){
-  console.log(name);
+//Test output to console
+function consoleLog(funcName, func){
+ return console.log(funcName, func);
 }
 
 export{
-  consoleProject
+  consoleLog
 }
