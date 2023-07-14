@@ -1,1 +1,0 @@
-//This module acts as the central coordinator, handling the communication and coordination between the logic, display, and storage modules.

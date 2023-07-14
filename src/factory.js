@@ -3,6 +3,7 @@
 //Array for storing data
 let projects_arr = [];
 
+
 //------Constructor------
 function Project(title){
   this.title = title
@@ -38,12 +39,15 @@ function createTask(projectIndex, title, description, dueDate, priority, isCompl
 
 //------Retrieve------
 function retrieveAllProject(){
-  projects_arr;
+  return projects_arr;
 }
 
 function retrieveProject(projectIndex){
-  projects_arr[projectIndex];
-  return projects_arr;
+  return  projects_arr[projectIndex];
+}
+
+function retrieveProjectTitle(projectIndex){
+  return projects_arr[projectIndex].title;
 }
 
 function retrieveAllTask(projectIndex){
@@ -52,8 +56,14 @@ function retrieveAllTask(projectIndex){
 }
 
 function retrieveTask(projectIndex, taskIndex){
-  projects_arr[projectIndex].tasks_arr[taskIndex];
-  return projects_arr;
+  const taskObject = projects_arr[projectIndex].tasks_arr[taskIndex]
+  let _tasks_arr = [];
+    _tasks_arr.push(taskObject.title);
+    _tasks_arr.push(taskObject.description);
+    _tasks_arr.push(taskObject.dueDate);
+    _tasks_arr.push(taskObject.priority);
+    _tasks_arr.push(taskObject.isComplete);
+  return _tasks_arr;
 }
 
 //------Update------
@@ -78,9 +88,19 @@ function deleteTask(projectIndex, taskIndex){
   return projects_arr;
 }
 
+//------Misc------
+function projects_arrLength(){
+  return projects_arr.length ;
+ }
+
+ function tasks_arrLength(projectIndex){
+  return projects_arr[projectIndex].tasks_arr.length;
+ }
+
 export {
   createProject, createTask, 
-  retrieveAllProject, retrieveProject, retrieveAllTask, retrieveTask,
+  retrieveAllProject, retrieveProject, retrieveProjectTitle, retrieveAllTask, retrieveTask,
   updateProjectTitle, updateTask,
-  deleteProject, deleteTask
+  deleteProject, deleteTask,
+  projects_arrLength, tasks_arrLength
 }

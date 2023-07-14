@@ -5,8 +5,7 @@ module.exports = {
   mode: 'development',
   entry: { 
     index: './src/index.js',
-    controller: './src/controller.js',
-    logic: './src/logic.js',
+    factory: './src/factory.js',
     display: './src/display.js',
     storage: './src/storage.js',
   },
