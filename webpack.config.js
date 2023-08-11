@@ -1,23 +1,17 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-  entry: { 
-    index: './src/index.js',
-    factory: './src/factory.js',
-    display: './src/display.js',
-    storage: './src/storage.js',
-  },
-  devtool: 'inline-source-map',
-  plugins: [
-    new HtmlWebpackPlugin({
-     title: 'Development',
-    }),
-  ],
+  entry: './src/index.js',  // Entry point for your application
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
+    filename: 'bundle.js',  // Output bundle file name
+    path: path.resolve(__dirname, 'dist'),  // Output directory
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/, // Match CSS files
+        use: ['style-loader', 'css-loader'], // Use these loaders
+      },
+    ],
   },
 };

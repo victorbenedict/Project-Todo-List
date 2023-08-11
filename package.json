@@ -2,12 +2,10 @@
   "name": "project-todo-list",
   "version": "1.0.0",
   "description": "Based on The Odin Project: https://www.theodinproject.com/lessons/node-path-javascript-todo-list",
-  "private": true,
+  "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
-    "build": "webpack",
-    "deploy": "git subtree push --prefix dist origin gh-pages" 
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -21,8 +19,9 @@
   },
   "homepage": "https://github.com/victorbenedict/Project-Todo-List#readme",
   "devDependencies": {
-    "html-webpack-plugin": "^5.5.3",
-    "webpack": "^5.88.1",
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   }
 }
