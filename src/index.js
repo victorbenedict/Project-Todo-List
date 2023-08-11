@@ -1,5 +1,7 @@
 import './styles.css';
+import { initializeDOM } from './dom'
+import { initializeData } from './dataFactory'
 
-// Initialize
-initalizeData()
-renderPlans();
+// initialize
+initializeData()
+initializeDOM()

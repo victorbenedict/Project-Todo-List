@@ -1,3 +1,17 @@
+import {
+  planArray,
+  addPlan,
+  addTask,
+  editTaskName,
+  editNotes,
+  editDuedate,
+  editPriority,
+  deletePlan,
+  deleteTask,
+  setData,
+} from './dataFactory';
+
+
 // DOM
 const planList = document.getElementById('plan');
 const taskSection = document.getElementById('task');
@@ -10,6 +24,7 @@ function renderPlans(){
   taskSection.innerHTML = ""
   detailSection.innerHTML = ""
   planArray.forEach((plan, planIndex) => {
+    
     const planListItem = document.createElement('li');
     const btn_delete = document.createElement('button')
     planListItem.textContent = plan.name;
@@ -135,6 +150,15 @@ function newTask(planIndex) {
 }
 
 // populate the local data when closing/refreshing the document
-window.addEventListener('beforeunload', function (event) {
+
+
+// export to index.js
+export function initializeDOM(){
+  renderPlans();
+  window.addEventListener('beforeunload', function (event) {
   setData();
-});
+  });
+};
+
+export function testDom() {
+}

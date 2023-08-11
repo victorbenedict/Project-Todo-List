@@ -1,4 +1,3 @@
-
 let planArray = [];
 
 // Constructor functions
@@ -68,7 +67,7 @@ function getData() {
   return JSON.parse(localStorage.getItem("plan"))
 }
 
-function initalizeData() {
+function initializeData() {
   const a = JSON.parse(localStorage.getItem("plan"))
   // check if there is an array or the array is empty
   if (!a || a.length == 0) {
@@ -78,4 +77,19 @@ function initalizeData() {
     // get local data
     planArray = getData()
   }
+}
+
+
+export {
+  planArray,
+  addPlan,
+  addTask,
+  editTaskName,
+  editNotes,
+  editDuedate,
+  editPriority,
+  deletePlan,
+  deleteTask,
+  setData,
+  initializeData
 }
