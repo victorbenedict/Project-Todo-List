@@ -1,6 +1,3 @@
-# Todo List 
 A simple todo list made in vanilla JavaScript. 
-
-## Features 
-- Local storage
-- Simple algorithm to sort completed items.
+Uses Local storage to fetch and save data.
+Features a simple algorithm to sort the completed items.
